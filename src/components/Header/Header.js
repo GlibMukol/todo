@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,18 +32,16 @@ const Header = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Router>
             <Typography variant="h6" className={classes.title}>
               <Link className={classes.link} to="/">
                 ToDo
               </Link>
             </Typography>
             <Typography variant="h6">
-              <Link className={classes.link} color="inherit" to="/login/">
+              <Link className={classes.link} color="inherit" to="/login">
                 Login
               </Link>
             </Typography>
-          </Router>
         </Toolbar>
       </AppBar>
     </div>
